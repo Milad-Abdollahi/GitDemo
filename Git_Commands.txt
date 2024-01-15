@@ -1,0 +1,129 @@
+// initial setup
+
+>>> git config --global user.name "Meelad"
+
+>>> git config --global user.email abd.milad@gmail.com
+
+
+// see the list of settings
+
+>>> git config --list
+
+>>> git config --list --show-origin
+
+
+
+// Commands
+
+synch = pull then push
+
+
+
+// Starting a git repo
+
+
+### STEP 1 ###
+>>> git init <optional folder name> 
+creates a hidden .git folder that indicates this folder is a git repo
+
+>>> git status
+tells you about current status of the repository
+
+Note: you only init once and just clone everywhere else and the hidden .git folder is created automatically
+
+
+### STEP 2 ###
+
+>>> git add <file name>
+>>> git status
+
+### STEP 3 ###
+>>> git commit
+write a message including a title and body
+
+a shortcut for commit message (only title):
+>>> git commit -m "<commit message>"
+
+see the commit log
+>>> git log
+
+
+Create a new branch
+
+see the current branch
+>>> git branch
+
+create a new branch
+>>> git branch <new brancg name>
+
+switch to new branch
+git checkout <new branch name>
+
+create a new branch and switch to it
+>>> git checkout -b <new branch name>
+
+delete a branch
+>>> git branch -d <branch name>
+
+force delete a branch
+>>> git branch -D <branch name>
+
+
+
+######### Creating A New GitHub Repository #########
+
+1- Create a new Repo on Github (Add .gitignore for Visual Studio)
+
+2- Clone the Repository from GitHub to local machine
+
+3- Create a Project in Visual Studio in the Repository
+
+4- Pull from GitHub to local repository to make sure nothing has changed
+using >>> git pull
+
+5- push to GitHub using >>> git push
+
+
+
+
+######### Working with an issue #########
+
+1- make sure you are on the main branch using >>> git status
+
+2- >>> git pull to make sure yot have the latest changes
+
+3- >>> git checkout -b <new branch name> to create a new branch to work on
+
+
+##  How To Work With Git
+1.  git checkout main
+2.  git pull
+3.  git checkout -b bug-00-branch-name
+4.  git add .
+5.  git commit
+6.  git checkout main
+7.  git pull
+8.  git checkout bug-00-branch-name
+9.  git merge main
+10. git checkout main
+11. git merge bug-00-branch-name
+12. git pull
+13. git push
+14. git branch -d bug-00-branch-name
+
+
+### Create a new upstream branch ###
+
+see the remote branch
+>>> git remote
+
+see the remote branch in detail
+>>> git remote show origin
+
+create a new branch in remote and push code to it
+>>> git push -u origin <new_branch_name>
+
+
+
+
+
